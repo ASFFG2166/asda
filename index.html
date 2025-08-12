@@ -1,0 +1,928 @@
+<html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深圳德成展览科技有限公司 - 专业特装搭建服务</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#36BFFA',
+                        dark: '#1D2939',
+                        light: '#F9FAFB',
+                        accent: '#FF7D00'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .transition-custom {
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            .scale-hover {
+                transition: transform 0.3s ease;
+            }
+            .scale-hover:hover {
+                transform: scale(1.03);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-dark bg-light">
+    <!-- 导航栏 -->
+    <header id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center">
+                        <span class="text-primary text-2xl font-bold">德成展览</span>
+                        <span class="ml-2 text-sm text-gray-500 hidden md:block">深圳德成展览科技有限公司</span>
+                    </a>
+                </div>
+                
+                <!-- 桌面导航 -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-primary font-medium transition-custom">首页</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary font-medium transition-custom">关于我们</a>
+                    <a href="#cases" class="text-gray-700 hover:text-primary font-medium transition-custom">特装案例</a>
+                    <a href="#services" class="text-gray-700 hover:text-primary font-medium transition-custom">服务内容</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary font-medium transition-custom">联系我们</a>
+                </nav>
+                
+                <!-- 移动端菜单按钮 -->
+                <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+                    <i class="fa fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 移动端导航菜单 -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-3 space-y-3">
+                <a href="#home" class="block text-gray-700 hover:text-primary font-medium py-2">首页</a>
+                <a href="#about" class="block text-gray-700 hover:text-primary font-medium py-2">关于我们</a>
+                <a href="#cases" class="block text-gray-700 hover:text-primary font-medium py-2">特装案例</a>
+                <a href="#services" class="block text-gray-700 hover:text-primary font-medium py-2">服务内容</a>
+                <a href="#contact" class="block text-gray-700 hover:text-primary font-medium py-2">联系我们</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section id="home" class="relative pt-24 md:pt-0 min-h-screen flex items-center bg-gradient-to-br from-primary/5 to-secondary/10 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-r from-dark/70 to-dark/40 z-10"></div>
+            <img src="https://picsum.photos/id/1076/1920/1080" alt="展览特装搭建现场" class="w-full h-full object-cover object-center">
+        </div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20 py-20">
+            <div class="max-w-3xl">
+                <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold text-white leading-tight text-shadow mb-6">
+                    打造令人印象深刻的<br>展览特装空间
+                </h1>
+                <p class="text-[clamp(1rem,2vw,1.25rem)] text-white/90 mb-8 max-w-xl">
+                    深圳德成展览科技有限公司专注于展览特装设计与搭建，为客户提供一站式展览解决方案，助力品牌脱颖而出。
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#cases" class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-medium transition-custom shadow-lg hover:shadow-xl">
+                        查看特装案例
+                    </a>
+                    <a href="#contact" class="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/30 px-8 py-3 rounded-lg font-medium transition-custom">
+                        联系我们
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+            <a href="#about" class="text-white/80 hover:text-white">
+                <i class="fa fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">关于德成展览</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">专业展览特装服务提供商，致力于为客户创造独特的品牌展示空间</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h3 class="text-2xl font-bold mb-4 text-dark">深圳德成展览科技有限公司</h3>
+                    <p class="text-gray-600 mb-4">
+                        德成展览是一家专注于展览特装设计、制作与搭建的专业服务公司，拥有多年行业经验和一支充满创意与执行力的专业团队。
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        我们致力于为各类展会、活动提供量身定制的特装解决方案，从概念设计到现场搭建，全程把控每一个细节，确保呈现最佳效果，帮助客户在展会中脱颖而出，提升品牌影响力。
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                                <i class="fa fa-lightbulb-o text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">创新设计</h4>
+                                <p class="text-gray-600 text-sm">独特创意，彰显品牌特色</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                                <i class="fa fa-cogs text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">精湛工艺</h4>
+                                <p class="text-gray-600 text-sm">匠心制作，注重每一个细节</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                                <i class="fa fa-clock-o text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">准时交付</h4>
+                                <p class="text-gray-600 text-sm">严格把控，确保按时完成</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                                <i class="fa fa-handshake-o text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2">诚信服务</h4>
+                                <p class="text-gray-600 text-sm">客户至上，建立长期合作</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 relative">
+                    <img src="https://picsum.photos/id/1048/800/600" alt="德成展览团队工作照" class="w-full h-auto rounded-lg shadow-xl">
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-lg max-w-xs hidden md:block">
+                        <div class="flex items-center mb-2">
+                            <div class="text-accent mr-2">
+                                <i class="fa fa-trophy"></i>
+                            </div>
+                            <h4 class="font-bold">行业认可</h4>
+                        </div>
+                        <p class="text-gray-600 text-sm">多年行业经验，服务超过500家企业，获得多项设计大奖</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特装案例 -->
+    <section id="cases" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">特装案例展示</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">精选我们的优秀特装搭建案例，展示不同行业、不同风格的展览设计</p>
+            </div>
+            
+            <!-- 案例筛选 -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="case-filter active px-6 py-2 rounded-full bg-primary text-white font-medium transition-custom" data-filter="all">全部案例</button>
+                <button class="case-filter px-6 py-2 rounded-full bg-white text-gray-700 font-medium transition-custom hover:bg-gray-100" data-filter="tech">科技行业</button>
+                <button class="case-filter px-6 py-2 rounded-full bg-white text-gray-700 font-medium transition-custom hover:bg-gray-100" data-filter="fashion">时尚行业</button>
+                <button class="case-filter px-6 py-2 rounded-full bg-white text-gray-700 font-medium transition-custom hover:bg-gray-100" data-filter="auto">汽车行业</button>
+                <button class="case-filter px-6 py-2 rounded-full bg-white text-gray-700 font-medium transition-custom hover:bg-gray-100" data-filter="food">食品行业</button>
+            </div>
+            
+            <!-- 案例网格 -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 案例1 -->
+                <div class="case-item scale-hover rounded-lg overflow-hidden shadow-lg bg-white" data-category="tech">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/180/600/400" alt="科技展特装展台" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-primary/70 opacity-0 hover:opacity-100 transition-custom flex items-center justify-center">
+                            <button class="view-case bg-white text-primary px-4 py-2 rounded-lg font-medium">查看详情</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-medium bg-primary/10 text-primary px-3 py-1 rounded-full">科技行业</span>
+                        <h3 class="text-xl font-bold mt-3 mb-2">智能科技博览会特装展台</h3>
+                        <p class="text-gray-600 text-sm">300㎡科技感展台设计，结合多媒体互动元素，打造沉浸式体验</p>
+                    </div>
+                </div>
+                
+                <!-- 案例2 -->
+                <div class="case-item scale-hover rounded-lg overflow-hidden shadow-lg bg-white" data-category="fashion">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/325/600/400" alt="时尚展特装展位" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-primary/70 opacity-0 hover:opacity-100 transition-custom flex items-center justify-center">
+                            <button class="view-case bg-white text-primary px-4 py-2 rounded-lg font-medium">查看详情</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-medium bg-primary/10 text-primary px-3 py-1 rounded-full">时尚行业</span>
+                        <h3 class="text-xl font-bold mt-3 mb-2">国际时装周品牌特装展位</h3>
+                        <p class="text-gray-600 text-sm">150㎡现代简约风格，采用环保材料，突出品牌高端定位</p>
+                    </div>
+                </div>
+                
+                <!-- 案例3 -->
+                <div class="case-item scale-hover rounded-lg overflow-hidden shadow-lg bg-white" data-category="auto">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/1072/600/400" alt="汽车展特装展台" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-primary/70 opacity-0 hover:opacity-100 transition-custom flex items-center justify-center">
+                            <button class="view-case bg-white text-primary px-4 py-2 rounded-lg font-medium">查看详情</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-medium bg-primary/10 text-primary px-3 py-1 rounded-full">汽车行业</span>
+                        <h3 class="text-xl font-bold mt-3 mb-2">新能源汽车展特装展台</h3>
+                        <p class="text-gray-600 text-sm">500㎡大型展台，结合车辆展示与互动体验，突显科技感</p>
+                    </div>
+                </div>
+                
+                <!-- 案例4 -->
+                <div class="case-item scale-hover rounded-lg overflow-hidden shadow-lg bg-white" data-category="food">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/292/600/400" alt="食品展特装展位" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-primary/70 opacity-0 hover:opacity-100 transition-custom flex items-center justify-center">
+                            <button class="view-case bg-white text-primary px-4 py-2 rounded-lg font-medium">查看详情</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-medium bg-primary/10 text-primary px-3 py-1 rounded-full">食品行业</span>
+                        <h3 class="text-xl font-bold mt-3 mb-2">国际食品展特装展位</h3>
+                        <p class="text-gray-600 text-sm">120㎡温馨风格设计，注重产品展示与观众互动体验</p>
+                    </div>
+                </div>
+                
+                <!-- 案例5 -->
+                <div class="case-item scale-hover rounded-lg overflow-hidden shadow-lg bg-white" data-category="tech">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/48/600/400" alt="电子展特装展台" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-primary/70 opacity-0 hover:opacity-100 transition-custom flex items-center justify-center">
+                            <button class="view-case bg-white text-primary px-4 py-2 rounded-lg font-medium">查看详情</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-medium bg-primary/10 text-primary px-3 py-1 rounded-full">科技行业</span>
+                        <h3 class="text-xl font-bold mt-3 mb-2">消费电子展特装展台</h3>
+                        <p class="text-gray-600 text-sm">200㎡开放式设计，结合产品体验区与品牌展示区</p>
+                    </div>
+                </div>
+                
+                <!-- 案例6 -->
+                <div class="case-item scale-hover rounded-lg overflow-hidden shadow-lg bg-white" data-category="fashion">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/342/600/400" alt="珠宝展特装展位" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-primary/70 opacity-0 hover:opacity-100 transition-custom flex items-center justify-center">
+                            <button class="view-case bg-white text-primary px-4 py-2 rounded-lg font-medium">查看详情</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-medium bg-primary/10 text-primary px-3 py-1 rounded-full">时尚行业</span>
+                        <h3 class="text-xl font-bold mt-3 mb-2">国际珠宝展特装展位</h3>
+                        <p class="text-gray-600 text-sm">80㎡高端奢华风格，采用定制灯光设计，突显产品质感</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-custom">
+                    查看更多案例
+                    <i class="fa fa-long-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务内容 -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">我们的服务</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">提供从设计到搭建的一站式展览特装服务，满足您的各类需求</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 服务1 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-custom scale-hover">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa fa-paint-brush text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">特装设计</h3>
+                    <p class="text-gray-600 mb-4">根据品牌定位和产品特性，提供创意独特的特装方案设计，包括3D效果图、平面布局图等。</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-primary mr-2"></i>
+                            <span>3D效果图设计</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-primary mr-2"></i>
+                            <span>平面布局规划</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-primary mr-2"></i>
+                            <span>色彩搭配设计</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 服务2 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-custom scale-hover">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa fa-cubes text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">展台搭建</h3>
+                    <p class="text-gray-600 mb-4">专业施工团队，严格按照设计方案进行现场搭建，确保展台质量和安全，按时完成交付。</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-primary mr-2"></i>
+                            <span>现场搭建施工</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-primary mr-2"></i>
+                            <span>质量安全把控</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-primary mr-2"></i>
+                            <span>按时交付使用</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 服务3 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-custom scale-hover">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa fa-object-group text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">道具制作</h3>
+                    <p class="text-gray-600 mb-4">定制各类展览所需道具、展架、展示柜等，采用优质材料，确保美观耐用。</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-primary mr-2"></i>
+                            <span>定制展架制作</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-primary mr-2"></i>
+                            <span>展示道具制作</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-primary mr-2"></i>
+                            <span>品牌标识制作</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 服务4 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-custom scale-hover">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa fa-lightbulb-o text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">多媒体互动</h3>
+                    <p class="text-gray-600 mb-4">融入多媒体互动技术，包括LED屏幕、互动投影、触控设备等，提升展台吸引力。</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-primary mr-2"></i>
+                            <span>LED屏幕安装</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-primary mr-2"></i>
+                            <span>互动装置设计</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-primary mr-2"></i>
+                            <span>数字内容制作</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 服务5 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-custom scale-hover">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa fa-truck text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">运输安装</h3>
+                    <p class="text-gray-600 mb-4">提供展品运输、仓储、现场安装等服务，确保展品安全抵达并顺利布置。</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-primary mr-2"></i>
+                            <span>展品运输服务</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-primary mr-2"></i>
+                            <span>临时仓储服务</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-primary mr-2"></i>
+                            <span>展品安装调试</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 服务6 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-custom scale-hover">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa fa-refresh text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">拆除与回收</h3>
+                    <p class="text-gray-600 mb-4">展会结束后提供专业拆除服务，对可回收材料进行分类处理，注重环保与资源再利用。</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-primary mr-2"></i>
+                            <span>专业拆除服务</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-primary mr-2"></i>
+                            <span>材料回收利用</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-primary mr-2"></i>
+                            <span>场地清理服务</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 为什么选择我们 -->
+    <section class="py-20 bg-gradient-to-br from-primary to-secondary text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-4">为什么选择德成展览</h2>
+                <div class="w-20 h-1 bg-white mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto opacity-90">我们以专业的服务和创新的设计，为客户打造卓越的展览体验</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl text-center hover:bg-white/20 transition-custom">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-calendar-check-o text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">10+年经验</h3>
+                    <p class="opacity-90">十年以上展览行业经验，熟悉各类展会流程和要求</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl text-center hover:bg-white/20 transition-custom">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">专业团队</h3>
+                    <p class="opacity-90">拥有资深设计师、工程师和施工团队，提供全方位服务</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl text-center hover:bg-white/20 transition-custom">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-line-chart text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">优质服务</h3>
+                    <p class="opacity-90">从设计到搭建全程跟踪服务，确保项目顺利完成</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl text-center hover:bg-white/20 transition-custom">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-leaf text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">绿色环保</h3>
+                    <p class="opacity-90">采用环保材料和工艺，注重可持续发展和资源节约</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">联系我们</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">无论您有任何疑问或需求，欢迎随时联系我们，我们将竭诚为您服务</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="bg-gray-50 p-8 rounded-xl mb-8">
+                        <h3 class="text-2xl font-bold mb-6">联系方式</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="fa fa-map-marker text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">公司地址</h4>
+                                    <p class="text-gray-600">深圳市南山区新美大厦</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="fa fa-phone text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">联系电话</h4>
+                                    <p class="text-gray-600">陈经理：13286845525</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="fa fa-envelope text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">电子邮箱</h4>
+                                    <p class="text-gray-600">2031646767@qq.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="fa fa-clock-o text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">工作时间</h4>
+                                    <p class="text-gray-600">周一至周五：9:00 - 18:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-8 rounded-xl">
+                        <h3 class="text-xl font-bold mb-4">关注我们</h3>
+                        <p class="text-gray-600 mb-6">通过社交媒体了解更多公司动态和案例展示</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-white text-primary rounded-full flex items-center justify-center transition-custom">
+                                <i class="fa fa-weixin"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-white text-primary rounded-full flex items-center justify-center transition-custom">
+                                <i class="fa fa-weibo"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-white text-primary rounded-full flex items-center justify-center transition-custom">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-primary/10 hover:bg-primary hover:text-white text-primary rounded-full flex items-center justify-center transition-custom">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6">发送咨询</h3>
+                        <form>
+                            <div class="grid sm:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="name" class="block text-gray-700 font-medium mb-2">您的姓名</label>
+                                    <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-custom" placeholder="请输入您的姓名">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-gray-700 font-medium mb-2">联系电话</label>
+                                    <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-custom" placeholder="请输入您的电话">
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">电子邮箱</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-custom" placeholder="请输入您的邮箱">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">咨询主题</label>
+                                <select id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-custom">
+                                    <option value="">请选择咨询主题</option>
+                                    <option value="design">特装设计咨询</option>
+                                    <option value="construction">展台搭建咨询</option>
+                                    <option value="price">价格咨询</option>
+                                    <option value="other">其他咨询</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">咨询内容</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-custom" placeholder="请输入您的咨询内容"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 px-6 rounded-lg transition-custom shadow-md hover:shadow-lg">
+                                提交咨询
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">德成展览</h3>
+                    <p class="text-gray-400 mb-6">深圳德成展览科技有限公司专注于展览特装设计与搭建，为客户提供一站式展览解决方案。</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-custom">
+                            <i class="fa fa-weixin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-custom">
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-custom">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-custom">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-custom">首页</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-custom">关于我们</a></li>
+                        <li><a href="#cases" class="text-gray-400 hover:text-white transition-custom">特装案例</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-custom">服务内容</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-custom">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">服务项目</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-custom">特装设计</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-custom">展台搭建</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-custom">道具制作</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-custom">多媒体互动</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-custom">运输安装</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">联系方式</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-gray-400 mr-3 mt-1"></i>
+                            <span class="text-gray-400">深圳市南山区新美大厦</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-phone text-gray-400 mr-3 mt-1"></i>
+                            <span class="text-gray-400">陈经理：13286845525</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-envelope text-gray-400 mr-3 mt-1"></i>
+                            <span class="text-gray-400">info@decheng-exhibition.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                <p>© 2023 深圳德成展览科技有限公司 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 案例详情模态框 -->
+    <div id="case-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" id="modal-overlay"></div>
+        <div class="relative bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-auto m-4 shadow-2xl">
+            <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 z-10">
+                <i class="fa fa-times text-xl"></i>
+            </button>
+            <div id="modal-content" class="p-6">
+                <!-- 模态框内容将通过JS动态加载 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 z-40">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // 导航栏滚动效果
+        const navbar = document.getElementById('navbar');
+        const backToTop = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2', 'shadow-md');
+                navbar.classList.remove('py-4', 'shadow-sm');
+                
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                navbar.classList.add('py-4', 'shadow-sm');
+                navbar.classList.remove('py-2', 'shadow-md');
+                
+                backToTop.classList.add('opacity-0', 'invisible');
+                backToTop.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        // 移动端菜单切换
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // 关闭移动菜单（如果打开）
+                mobileMenu.classList.add('hidden');
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // 返回顶部
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 案例筛选
+        const caseFilters = document.querySelectorAll('.case-filter');
+        const caseItems = document.querySelectorAll('.case-item');
+        
+        caseFilters.forEach(filter => {
+            filter.addEventListener('click', function() {
+                // 更新筛选按钮样式
+                caseFilters.forEach(btn => {
+                    btn.classList.remove('active', 'bg-primary', 'text-white');
+                    btn.classList.add('bg-white', 'text-gray-700', 'hover:bg-gray-100');
+                });
+                
+                this.classList.add('active', 'bg-primary', 'text-white');
+                this.classList.remove('bg-white', 'text-gray-700', 'hover:bg-gray-100');
+                
+                const category = this.getAttribute('data-filter');
+                
+                // 筛选案例
+                caseItems.forEach(item => {
+                    if (category === 'all' || item.getAttribute('data-category') === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // 案例详情模态框
+        const caseModal = document.getElementById('case-modal');
+        const modalOverlay = document.getElementById('modal-overlay');
+        const closeModal = document.getElementById('close-modal');
+        const modalContent = document.getElementById('modal-content');
+        const viewCaseButtons = document.querySelectorAll('.view-case');
+        
+        // 案例详情数据
+        const caseDetails = {
+            '科技行业-智能科技博览会特装展台': {
+                title: '智能科技博览会特装展台',
+                category: '科技行业',
+                image: 'https://picsum.photos/id/180/1200/600',
+                images: [
+                    'https://picsum.photos/id/180/800/500',
+                    'https://picsum.photos/id/48/800/500',
+                    'https://picsum.photos/id/160/800/500'
+                ],
+                description: '该项目为智能科技博览会的特装展台，面积300平方米，采用现代科技感设计风格，以蓝色和白色为主色调，突显科技感和未来感。展台结合了多媒体互动元素，包括LED大屏、互动投影和触控体验区，为参观者提供沉浸式体验。',
+                details: [
+                    '项目面积：300㎡',
+                    '设计风格：现代科技感',
+                    '主要材料：铝合金框架、亚克力、LED屏',
+                    '施工周期：15天',
+                    '展会名称：2023国际智能科技博览会'
+                ]
+            },
+            '时尚行业-国际时装周品牌特装展位': {
+                title: '国际时装周品牌特装展位',
+                category: '时尚行业',
+                image: 'https://picsum.photos/id/325/1200/600',
+                images: [
+                    'https://picsum.photos/id/325/800/500',
+                    'https://picsum.photos/id/342/800/500',
+                    'https://picsum.photos/id/331/800/500'
+                ],
+                description: '为国际时装周设计的品牌特装展位，面积150平方米，采用现代简约风格，以黑白为主色调，搭配品牌特色色作为点缀。展位设计注重空间感和流动性，采用环保材料制作，突出品牌高端定位和时尚感。',
+                details: [
+                    '项目面积：150㎡',
+                    '设计风格：现代简约',
+                    '主要材料：环保板材、玻璃、金属框架',
+                    '施工周期：10天',
+                    '展会名称：2023春夏国际时装周'
+                ]
+            },
+            '汽车行业-新能源汽车展特装展台': {
+                title: '新能源汽车展特装展台',
+                category: '汽车行业',
+                image: 'https://picsum.photos/id/1072/1200/600',
+                images: [
+                    'https://picsum.photos/id/1072/800/500',
+                    'https://picsum.photos/id/1071/800/500',
+                    'https://picsum.photos/id/1073/800/500'
+                ],
+                description: '该项目为新能源汽车展的大型特装展台，面积500平方米，设计融合了科技感与环保理念，以蓝色和绿色为主色调，象征新能源和环保。展台分为车辆展示区、互动体验区和品牌文化区，结合多媒体技术展示车辆性能和品牌理念。',
+                details: [
+                    '项目面积：500㎡',
+                    '设计风格：科技与环保结合',
+                    '主要材料：钢结构、玻璃、环保板材',
+                    '施工周期：20天',
+                    '展会名称：2023国际新能源汽车展览会'
+                ]
+            }
+        };
+        
+        // 打开模态框
+        viewCaseButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const caseItem = this.closest('.case-item');
+                const category = caseItem.getAttribute('data-category');
+                const title = caseItem.querySelector('h3').textContent;
+                const caseKey = `${category}-${title}`;
+                
+                // 获取案例详情
+                const caseDetail = caseDetails[caseKey] || caseDetails[Object.keys(caseDetails)[0]];
+                
+                // 填充模态框内容
+                modalContent.innerHTML = `
+                    <div class="mb-6">
+                        <span class="text-xs font-medium bg-primary/10 text-primary px-3 py-1 rounded-full">${caseDetail.category}</span>
+                        <h2 class="text-2xl font-bold mt-3 mb-4">${caseDetail.title}</h2>
+                        <img src="${caseDetail.image}" alt="${caseDetail.title}" class="w-full h-auto rounded-lg mb-6">
+                        <p class="text-gray-600 mb-6">${caseDetail.description}</p>
+                        
+                        <h3 class="text-xl font-bold mb-4">项目详情</h3>
+                        <ul class="space-y-2 text-gray-600 mb-6">
+                            ${caseDetail.details.map(detail => `<li class="flex items-center"><i class="fa fa-check-circle text-primary mr-2"></i>${detail}</li>`).join('')}
+                        </ul>
+                        
+                        <h3 class="text-xl font-bold mb-4">更多图片</h3>
+                        <div class="grid grid-cols-3 gap-4">
+                            ${caseDetail.images.map(img => `<img src="${img}" alt="${caseDetail.title}" class="w-full h-32 object-cover rounded-lg">`).join('')}
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <a href="#contact" class="inline-block bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-medium transition-custom">
+                            咨询类似项目
+                        </a>
+                    </div>
+                `;
+                
+                // 显示模态框
+                caseModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        // 关闭模态框
+        function closeModalFunc() {
+            caseModal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+        
+        closeModal.addEventListener('click', closeModalFunc);
+        modalOverlay.addEventListener('click', closeModalFunc);
+        
+        // 点击ESC键关闭模态框
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && !caseModal.classList.contains('hidden')) {
+                closeModalFunc();
+            }
+        });
+    </script>
+
+
+</body></html>
